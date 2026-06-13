@@ -1,0 +1,1 @@
+exports.handler = async function(event){const {topic}=JSON.parse(event.body);const ideas=[`🔥 ${topic} reel idea`,`🎬 ${topic} viral tips`,`💡 ${topic} hacks`,`🚀 ${topic} growth reel`,`😲 ${topic} secret video`];const random=ideas[Math.floor(Math.random()*ideas.length)];return {statusCode:200,body:JSON.stringify({output:random})};};
